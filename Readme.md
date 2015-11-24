@@ -18,11 +18,12 @@ How fast does it run? Does it scale?
 
 1. Clone this repo
 2. Have the latest Node installed or greater than 0.12.x (Clojure book that I read says it, I have Node 4.2.2 installed and it works)
-3. Build the project by using the following command in your terminal inside the project.
+3. Download the Jar file for compiling ClojureScript to Javascript [https://github.com/clojure/clojurescript/wiki/Quick-Start#clojurescript-compiler](https://github.com/clojure/clojurescript/wiki/Quick-Start#clojurescript-compiler)
+4. Build the project by using the following command in your terminal inside the project.
   ```
   java -cp cljs.jar:src clojure.main node.clj
   ```
-4. Run the project:
+5. Run the project:
   ```
   node main.js
   ```
