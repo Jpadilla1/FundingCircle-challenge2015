@@ -43,7 +43,7 @@
   (loop [x 0]
     (if (< x (- (count primes) 1))
       (loop [i 0]
-        (if (< i (- (count primes) 1))
+        (if (< i (count primes))
           (do
             (println (gstring/format "%d," (nth primes i))
               (string/join  ", " (map #(* % (nth primes i)) primes)))
