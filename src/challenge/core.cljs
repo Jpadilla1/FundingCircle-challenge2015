@@ -5,7 +5,7 @@
     [goog.string :as gstring]
     [goog.string.format]))
 
-; Enabled print to console
+; Enables print to console
 (nodejs/enable-util-print!)
 
 ; Number of primes to generate with their multiplication table
@@ -14,12 +14,13 @@
 ; Checks if number is prime
 (defn prime?
   [n]
-  (if (even? n) false
-    (let [root (int (Math/sqrt n))]
-      (loop [i 3]
-        (if (> i root) true
-            (if (zero? (mod n i)) false
-              (recur (+ i 2))))))))
+  (if (= n 2) true
+    (if (even? n) false
+      (let [root (int (Math/sqrt n))]
+        (loop [i 3]
+          (if (> i root) true
+              (if (zero? (mod n i)) false
+                (recur (+ i 2)))))))))
 
 ; Generates N primes
 (defn n-primes
